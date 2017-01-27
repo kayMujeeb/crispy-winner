@@ -26,7 +26,7 @@ functions = {
 
         var bearerheader = 'Bearer ' + config.bearertoken;
         console.log(config.bearertoken);
-        request.get('https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=ttcnotices&count=1', {headers: {Authorization: bearerheader}}, function(error, body, response) {
+        request.get('https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=ridethelight17&count=1', {headers: {Authorization: bearerheader}}, function(error, body, response) {
             if (error)
             console.log(error);
             else {
