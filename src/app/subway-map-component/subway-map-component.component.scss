@@ -1,0 +1,502 @@
+$pulse-alert-color-hex: #FF3333;
+$pulse-alert-color-rgba-high: rgba(255,51,51, 0.4);
+$pulse-alert-color-rgba-low: rgba(255,51,51, 0);
+
+$pulse-clear-color-hex: #33FF33;
+$pulse-clear-color-rgba-high: rgba(51,255,51, 0.4);
+$pulse-clear-color-rgba-low: rgba(51,255,51, 0);
+
+.app-flex-container {
+    height: 1600px;
+    width: 2048px;
+}
+.main {
+    width: 100%;
+    height: 100%;
+    cursor: move;
+    background-image: url(assets/subwayMap.svg);
+    background-color: black;
+    background-position: 2px center;
+    background-repeat: no-repeat;
+}
+/*////////Hover Dot//////*/
+.dot {
+	width:12px;
+	height:12px;
+	border:0.5px solid #000;
+	border-radius:16px;
+	background-color:#FFF;
+	cursor:pointer;
+	z-index:1;
+	zoom: 1;
+}
+
+.dot{
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: $pulse-clear-color-hex;
+  cursor: pointer;
+  box-shadow: 0 0 0 rgba(255,51,51, 0.4);
+  animation: pulsegreen 2s infinite;
+
+  :hover {
+    animation: none;
+
+  }
+  
+}
+
+@-webkit-keyframes pulsegreen {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 $pulse-clear-color-rgba-high;
+  }
+  70% {
+      -webkit-box-shadow: 0 0 0 10px rgba(255,51,51, 0);
+  }
+  100% {
+      -webkit-box-shadow: 0 0 0 0 rgba(255,51,51, 0);
+  }
+}
+@keyframes pulsegreen {
+  0% {
+    -moz-box-shadow: 0 0 0 0 $pulse-clear-color-rgba-high;
+    box-shadow: 0 0 0 0 $pulse-clear-color-rgba-high;
+  }
+  70% {
+      -moz-box-shadow: 0 0 0 10px $pulse-clear-color-rgba-low;
+      box-shadow: 0 0 0 10px $pulse-clear-color-rgba-low;
+  }
+  100% {
+      -moz-box-shadow: 0 0 0 0 $pulse-clear-color-rgba-low;
+      box-shadow: 0 0 0 0 $pulse-clear-color-rgba-low;
+  }
+}
+
+
+.pulse {
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: $pulse-alert-color-hex;
+  cursor: pointer;
+  box-shadow: 0 0 0 rgba(255,51,51, 0.4);
+  animation: pulse 2s infinite;
+
+  :hover {
+     animation: none;
+  }
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 $pulse-alert-color-rgba-high;
+  }
+  70% {
+      -webkit-box-shadow: 0 0 0 10px rgba(255,51,51, 0);
+  }
+  100% {
+      -webkit-box-shadow: 0 0 0 0 rgba(255,51,51, 0);
+  }
+}
+@keyframes pulse {
+  0% {
+    -moz-box-shadow: 0 0 0 0 $pulse-alert-color-rgba-high;
+    box-shadow: 0 0 0 0 $pulse-alert-color-rgba-high;
+  }
+  70% {
+      -moz-box-shadow: 0 0 0 10px $pulse-alert-color-rgba-low;
+      box-shadow: 0 0 0 10px $pulse-alert-color-rgba-low;
+  }
+  100% {
+      -moz-box-shadow: 0 0 0 0 $pulse-alert-color-rgba-low;
+      box-shadow: 0 0 0 0 $pulse-alert-color-rgba-low;
+  }
+}
+
+a:focus .dot{
+	background:#000;
+	border:1px solid #fff;
+	z-index:100;
+}
+.dot:hover, .dot:focus {
+	background:#000;
+	border:1px solid #fff;
+	z-index:100;
+}
+/*//////////  STATIONS  /////////*/
+/*YONGE-UNIVERSITY-SPADINA LINE*/
+
+#downsview {
+    position: absolute;
+    top: 610px;
+    left: 775px;
+}
+#wilson {
+    position: absolute;
+    top: 635px;
+    left: 775px;
+}
+#yorkdale {
+    position: absolute;
+    top: 655px;
+    left: 775px;
+}
+#lawrenceW {
+    position: absolute;
+    top: 678px;
+    left: 775px;
+}
+#glencairn {
+    position: absolute;
+    top: 698px;
+    left: 775px;
+}
+#eglintonWest {
+    position: absolute;
+    top: 718px;
+    left: 775px;
+}
+#stclairWest {
+    position: absolute;
+    top: 774px;
+    left: 826px;
+}
+#dupont {
+    position: absolute;
+    top: 817px;
+    left: 866px;
+}
+#spadinaYUS {
+    position: absolute;
+    top: 845px;
+    left: 866px;
+}
+#stgeorgeYUS {
+    position: absolute;
+    top: 854px;
+    left: 924px;
+}
+#museum {
+    position: absolute;
+    top: 913px;
+    left: 940px;
+}
+#queensPark {
+    position: absolute;
+    top: 935px;
+    left: 940px;
+}
+#stPatrick {
+    position: absolute;
+    top: 962px;
+    left: 940px;
+}
+#osgoode {
+    position: absolute;
+    top: 987px;
+    left: 940px;
+}
+#stAndrew {
+    position: absolute;
+    top: 1007px;
+    left: 940px;
+}
+#union {
+    position: absolute;
+    top: 1056px;
+    left: 984px;
+}
+#king {
+    position: absolute;
+    top: 1007px;
+    left: 1028px;
+}
+#queen {
+    position: absolute;
+    top: 987px;
+    left: 1028px;
+}
+#dundas {
+    position: absolute;
+    top: 962px;
+    left: 1028px;
+}
+#college {
+    position: absolute;
+    top: 935px;
+    left: 1028px;
+}
+#wellesley {
+    position: absolute;
+    top: 913px;
+    left: 1028px;
+}
+#bloorYonge {
+    position: absolute;
+    top: 872px;
+    left: 1028px;
+}
+#rosedale {
+    position: absolute;
+    top: 821px;
+    left: 1028px;
+}
+#summerhill {
+    position: absolute;
+    top: 796px;
+    left: 1028px;
+}
+#stClair {
+    position: absolute;
+    top: 771px;
+    left: 1028px;
+}
+#davisville {
+    position: absolute;
+    top: 746px;
+    left: 1028px;
+}
+#eglinton {
+    position: absolute;
+    top: 721px;
+    left: 1028px;
+}
+#lawrence {
+    position: absolute;
+    top: 684px;
+    left: 1028px;
+}
+#yorkMills {
+    position: absolute;
+    top: 644px;
+    left: 1028px;
+}
+#sheppardYongeYUS {
+    position: absolute;
+    top: 608px;
+    left: 1028px;
+}
+#northYorkCentre {
+    position: absolute;
+    top: 575px;
+    left: 1028px;
+}
+#finch {
+    position: absolute;
+    top: 550px;
+    left: 1028px;
+}
+/*BLOOR-DANFORTH LINE*/
+
+#kipling {
+    position: absolute;
+    top: 310px;
+    left: 100px;
+}
+#islington {
+    position: absolute;
+    top: 310px;
+    left: 143px;
+}
+#royalYork {
+    position: absolute;
+    top: 310px;
+    left: 187px;
+}
+#oldMill {
+    position: absolute;
+    top: 310px;
+    left: 231px;
+}
+#jane {
+    position: absolute;
+    top: 310px;
+    left: 275px;
+}
+#runnymede {
+    position: absolute;
+    top: 310px;
+    left: 318px;
+}
+#highPark {
+    position: absolute;
+    top: 310px;
+    left: 362px;
+}
+#keele {
+    position: absolute;
+    top: 310px;
+    left: 406px;
+}
+#dundasWest {
+    position: absolute;
+    top: 310px;
+    left: 450px;
+}
+#lansdowne {
+    position: absolute;
+    top: 310px;
+    left: 494px;
+}
+#dufferin {
+    position: absolute;
+    top: 310px;
+    left: 537px;
+}
+#ossington {
+    position: absolute;
+    top: 310px;
+    left: 581px;
+}
+#christie {
+    position: absolute;
+    top: 310px;
+    left: 625px;
+}
+#bathurst {
+    position: absolute;
+    top: 310px;
+    left: 669px;
+}
+#spadinaBD {
+    position: absolute;
+    top: 310px;
+    left: 726px;
+}
+#stGeorgeBD {
+    position: absolute;
+    top: 310px;
+    left: 789px;
+}
+#bay {
+    position: absolute;
+    top: 310px;
+    left: 826px;
+}
+#bloorYongeBD {
+    position: absolute;
+    top: 310px;
+    left: 863px;
+}
+#sherbourne {
+    position: absolute;
+    top: 310px;
+    left: 917px;
+}
+#castleFrank {
+    position: absolute;
+    top: 310px;
+    left: 961px;
+}
+#broadview {
+    position: absolute;
+    top: 310px;
+    left: 1005px;
+}
+#chester {
+    position: absolute;
+    top: 310px;
+    left: 1049px;
+}
+#pape {
+    position: absolute;
+    top: 310px;
+    left: 1092px;
+}
+#donlands {
+    position: absolute;
+    top: 310px;
+    left: 1136px;
+}
+#greenwood {
+    position: absolute;
+    top: 310px;
+    left: 1180px;
+}
+#coxwell {
+    position: absolute;
+    top: 310px;
+    left: 1224px;
+}
+#woodbine {
+    position: absolute;
+    top: 310px;
+    left: 1268px;
+}
+#mainStreet {
+    position: absolute;
+    top: 310px;
+    left: 1311px;
+}
+#victoriaPark {
+    position: absolute;
+    top: 266px;
+    left: 1355px;
+}
+#warden {
+    position: absolute;
+    top: 226px;
+    left: 1395px;
+}
+#kennedy {
+    position: absolute;
+    top: 190px;
+    left: 1432px;
+}
+/*SCARBOROUGH LINE*/
+
+#lawrenceEast {
+    position: absolute;
+    top: 151px;
+    left: 1432px;
+}
+#ellesmere {
+    position: absolute;
+    top: 120px;
+    left: 1432px;
+}
+#midland {
+    position: absolute;
+    top: 104px;
+    left: 1466px;
+}
+#scarboroughCentre {
+    position: absolute;
+    top: 104px;
+    left: 1528px;
+}
+#mcCowan {
+    position: absolute;
+    top: 104px;
+    left: 1590px;
+}
+/*SHEPPARD LINE*/
+
+#sheppardYongeS {
+    position: absolute;
+    top: 90px;
+    left: 863px;
+}
+#bayview {
+    position: absolute;
+    top: 90px;
+    left: 928px;
+}
+#bessarion {
+    position: absolute;
+    top: 90px;
+    left: 994px;
+}
+#leslie {
+    position: absolute;
+    top: 90px;
+    left: 1060px;
+}
+#donMills {
+    position: absolute;
+    top: 90px;
+    left: 1125px;
+}
